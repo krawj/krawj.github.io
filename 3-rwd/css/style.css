@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+}
+
+h1, h2 {
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 2em;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 5%;
+    background-image: url(../img/man-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
