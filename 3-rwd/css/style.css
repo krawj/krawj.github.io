@@ -19,8 +19,8 @@ h1, h2 {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    padding: 5%;
-    background-image: url(../img/man-1.jpg);
+    padding: 25px;
+    background-image: url('../img/man-1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
