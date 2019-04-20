@@ -4,5 +4,61 @@
 
 html, body {
     margin: 0;
+    font-size: 14px;
     background-color: #98fb98;
+}
+
+.productList {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product {
+    height: 300px;
+    flex-basis: 25%;
+    background-size: cover;
+    background-position: center;
+    margin: 15px;
+}
+
+.product-1 {
+    background-image: url('../img/product-1.jpg');
+}
+
+.product-2 {
+    background-image: url('../img/product-2.jpg');
+}
+
+.product-3 {
+    background-image: url('../img/product-3.jpg');
+}
+
+.product-4 {
+    background-image: url('../img/product-4.jpg');
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background-color: rgba(255,	111, 0, 0.7);
+    transition: opacity 0.2s ease-in-out;
+}
+
+.product a,
+.product a:active,
+.product a:visited {
+    color: #fff;
+    text-decoration: none;
+    font-size: 5em;
+}
+
+.product:hover .overlay {
+    opacity: 1;
 }
