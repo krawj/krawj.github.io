@@ -7,7 +7,7 @@
 
 @media screen and (max-width: 480px) {
     .product {
-        flex-basis: 100%;
+        flex-basis: calc(100% - 30px);
         margin: 15px;
     }
 }
