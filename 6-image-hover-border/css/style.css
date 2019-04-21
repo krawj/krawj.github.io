@@ -16,4 +16,27 @@ html, body {
     margin-left: -325px;
     background-image: url('../img/6-jezioro.jpg');
     background-repeat: no-repeat;
+    background-position: center;
+}
+
+.partial__borders::before,
+.partial__borders::after {
+    position: absolute;
+    width: calc(100% + 8px);
+    height: calc(50% + 8px);
+    content: '';
+    border-color: #000;
+    border-style: solid;
+}
+
+.partial__borders::before {
+    border-width: 3px 3px 0 3px;
+    top: -8px;
+    left: -8px;
+}
+
+.partial__borders::after {
+    border-width: 0 3px 3px 3px;
+    bottom: -8px;
+    left: -8px;
 }
