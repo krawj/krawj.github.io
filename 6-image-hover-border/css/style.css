@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+}
+
+.partial__borders {
+    position: absolute;
+    width: 650px;
+    height: 350px;
+    top: 50%;
+    margin-top: -175px;
+    left: 50%;
+    margin-left: -325px;
+    background-image: url('../img/6-jezioro.jpg');
+    background-repeat: no-repeat;
+}
