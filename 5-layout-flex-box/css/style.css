@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.pageContainer {
+    width: 100vw;
+    text-align: center;
+}
+
+.pageContainer *:not(section) {
+    padding: 15px;
+}
+
+.pageHeader {
+    background-color: #ff4500;
+}
+
+.section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flext-start;
+    align-items: flext-start;
+}
+
+.left {
+    background-color: #228b22;
+    flex-basis: 20%;
+}
+
+.content {
+    background-color: #00bfff;
+    flex-basis: 60%;
+}
+
+.right {
+    background-color: #ffb6c1;
+    flex-basis: 20%;
+}
+
+.pageFooter {
+    background-color: #9370db;
+}
