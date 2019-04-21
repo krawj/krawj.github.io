@@ -19,24 +19,86 @@ html, body {
     background-position: center;
 }
 
-.partial__borders::before,
-.partial__borders::after {
+.partial__borders__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.partial__borders__lh,
+.partial__borders__rh {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+.partial__borders__lh {
+    top: 0;
+    left: 0px;
+}
+
+.partial__borders__rh {
+    top: 0;
+    right: 0;
+}
+
+.partial__borders__lh::before,
+.partial__borders__lh::after,
+.partial__borders__rh::before,
+.partial__borders__rh::after {
     position: absolute;
     width: calc(100% + 8px);
-    height: calc(50% + 8px);
-    content: '';
-    border-color: #000;
+    height: calc(30% + 8px);    
+    content: ' ';
     border-style: solid;
+    border-color: transparent;
 }
 
-.partial__borders::before {
-    border-width: 3px 3px 0 3px;
-    top: -8px;
-    left: -8px;
+.partial__borders__lh::before {
+    border-width: 4px 0 0 4px;
+    top: -10px;
+    left: -10px; 
 }
 
-.partial__borders::after {
-    border-width: 0 3px 3px 3px;
-    bottom: -8px;
-    left: -8px;
+.partial__borders__rh::before {
+    border-width: 4px 4px 0 0;
+    top: -10px;
+    right: -10px;
+}
+
+.partial__borders__lh::after {
+    border-width: 0 0 4px 4px;
+    bottom: -10px;
+    left: -10px;
+}
+
+.partial__borders__rh::after {
+    border-width: 0 4px 4px 0;
+    bottom: -10px;
+    right: -10px;
+}
+
+.partial__borders__inner:hover .partial__borders__lh::before,
+.partial__borders__inner:hover .partial__borders__lh::after,
+.partial__borders__inner:hover .partial__borders__rh::before,
+.partial__borders__inner:hover .partial__borders__rh::after {
+    animation-name: drawBorder;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes drawBorder {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: #000;
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+
+    100% {
+        border-color: #000;
+        transform: scaleX(1);
+    }
 }
