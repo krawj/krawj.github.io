@@ -29,6 +29,10 @@ html, body {
     align-items: flext-start;
 }
 
+.section * {
+    height: 200px;
+}
+
 .left {
     background-color: #228b22;
     flex-basis: 20%;

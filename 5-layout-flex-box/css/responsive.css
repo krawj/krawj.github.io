@@ -1,0 +1,31 @@
+@media screen and (max-width: 992px) {
+    .section {
+        flex-flow: row wrap-reverse;
+    }
+    
+    .left {
+        flex-basis: 100%;
+    }
+
+    .content {
+        flex-grow: 3;
+    }
+
+    .right {
+        flex-grow: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        flex-flow: row wrap;
+    }
+    
+    .section * {
+        flex-basis: 100%;
+    }
+
+    .content {
+        order: -1;
+    }
+}
