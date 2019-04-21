@@ -23,6 +23,10 @@ html, body {
     position: relative;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
 }
 
 .partial__borders__lh,
@@ -30,6 +34,18 @@ html, body {
     position: absolute;
     width: 50%;
     height: 100%;
+}
+
+.banner {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: calc(100% + 18px);
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    color: #fff;
+    font-size: 72px;
 }
 
 .partial__borders__lh {
@@ -47,9 +63,10 @@ html, body {
 .partial__borders__rh::before,
 .partial__borders__rh::after {
     position: absolute;
-    width: calc(100% + 8px);
-    height: calc(30% + 8px);    
-    content: ' ';
+    display: block;
+    width: calc(100% + 9px);
+    height: calc(50% + 9px);    
+    content: '\200B';
     border-style: solid;
     border-color: transparent;
 }
@@ -83,22 +100,37 @@ html, body {
 .partial__borders__inner:hover .partial__borders__rh::before,
 .partial__borders__inner:hover .partial__borders__rh::after {
     animation-name: drawBorder;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
 }
 
+.partial__borders__inner:hover .banner {
+    animation-name: revealBanner;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes revealBanner {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
 @keyframes drawBorder {
     0% {
-        width: 0;
-        height: 0;
-        border-top-color: #000;
-        border-left-color: transparent;
-        border-right-color: transparent;
+        width: 1px;
+        height: 1px;
     }
 
     100% {
         border-color: #000;
-        transform: scaleX(1);
     }
 }
