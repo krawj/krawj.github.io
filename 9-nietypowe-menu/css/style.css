@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    font-size: 24px;
+}
+
+.menu {
+    position: relative;
+    width: 100vw;
+    height: 100px;
+    color: #fff;
+}
+
+.left, .right {
+    position: absolute;
+    width: 200%;
+    height: 200px;
+    top: -50%;
+    background-color: #00008b;
+}
+
+.left {
+    left: -100%;
+    transform: rotate(-7deg);
+}
+
+.right {
+    right: -100%;
+    transform: rotate(7deg);
+}
+
+.links {
+    position: absolute;
+    text-transform: uppercase;
+    margin: 15px;
+    padding: 0;
+}
+
+.links li {
+    display: inline-block;
+    margin: 15px;
+}
+
+.links a,
+.links a:active,
+.links a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.linksLeft {
+    left: 0%;
+}
+
+.linksRight {
+    right: 0%;
+}
+
+.content {
+    text-align: center;
+}
+
+h1 {
+    font-size: 72px;
+}
