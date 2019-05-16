@@ -14,9 +14,9 @@ btn.addEventListener("click", getProgrammerData = () => {
             const job = `Zawód: ${response.zawod}`;
             const comp = `Firma: ${response.firma}`;
 
-            const info = document.createTextNode(`${first}; ${last}; ${job}; ${comp}.`)
+            const info = document.createTextNode(`${first}; ${last}; ${job}; ${comp}.`);
 
-            document.body.appendChild(dataDiv);
+            btn.after(dataDiv);
             dataDiv.appendChild(info);
 
         });
