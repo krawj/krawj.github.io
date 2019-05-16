@@ -5,5 +5,19 @@ btn.addEventListener("click", getProgrammerData = () => {
         .then(response => response.json())
         .then(response => {
             console.log(response);
+
+            const dataDiv = document.createElement("div");
+            dataDiv.setAttribute('id', 'dane-programisty');
+
+            const first = `Imię: ${response.imie}`;
+            const last = `Nazwisko: ${response.nazwisko}`;
+            const job = `Zawód: ${response.zawod}`;
+            const comp = `Firma: ${response.firma}`;
+
+            const info = document.createTextNode(`${first}; ${last}; ${job}; ${comp}.`)
+
+            document.body.appendChild(dataDiv);
+            dataDiv.appendChild(info);
+
         });
 });
