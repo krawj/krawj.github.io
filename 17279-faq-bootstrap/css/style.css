@@ -32,3 +32,7 @@ h1.title::after {
 .accordion {
     width: 90%;
 }
+
+.card-header h2 {
+    text-align: center;
+}
