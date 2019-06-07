@@ -52,7 +52,7 @@
 		}
 
 		h1 {
-			font-size: $base-font-size + 32;
+			font-size: $base-font-size + 50;
 			margin-top: $baseline;
 			margin-bottom: $baseline;
 		}
@@ -64,7 +64,8 @@
 
 		.btn-primary {
 			margin-top: $baseline * 2;
-			font-size: $base-font-size - 2;
+			font-size: $base-font-size + 10;
+			transform: translateY(-24px);
 			padding: 10px 12px;
 		}
 	}
